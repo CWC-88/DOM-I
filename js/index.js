@@ -45,12 +45,86 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let anchors = document.querySelectorAll("nav a")
 
-// anchors.for(=>document.querySelector(Element.insertAdjacentText()){
-//    )
-// }
-
-for (i = 0; i < anchors.length; i++) {
+for (let i = 0; i < anchors.length; i++) {
   anchors[i].innerText=siteContent["nav"][`nav-item-${i+1}`];
+
 }
 
 
+
+
+
+// h1
+let header1 = document.querySelector("h1")
+header1.textContent=siteContent["cta"]["h1"];
+
+
+// // codeball
+let  imgc = document.getElementById("cta-img")
+imgc.setAttribute('src', siteContent["cta"]["img-src"])
+
+// // getstarted button
+
+let  gsbutt = document.getElementsByTagName("button")
+gsbutt[0].textContent=siteContent["cta"]["button"];
+
+
+
+
+
+
+// // maincontent
+const h4 = document.querySelectorAll(".text-content h4");
+h4[0].textContent = siteContent["main-content"]["features-h4"]
+h4[1].textContent = siteContent["main-content"]["about-h4"]
+h4[2].textContent = siteContent["main-content"]["services-h4"]
+h4[3].textContent = siteContent["main-content"]["product-h4"]
+h4[4].textContent = siteContent["main-content"]["vision-h4"]
+
+
+const mc = document.querySelectorAll(".text-content p");
+mc[0].textContent = siteContent["main-content"]["features-content"]
+mc[1].textContent = siteContent["main-content"]["about-content"]
+mc[2].textContent = siteContent["main-content"]["services-content"]
+mc[3].textContent = siteContent["main-content"]["product-content"]
+mc[4].textContent = siteContent["main-content"]["vision-content"]
+
+
+// middleimg
+const mi = document.getElementById("middle-img")
+mi.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const  cont = document.querySelector(".contact h4")
+cont.textContent=siteContent["contact"]["contact-h4"];
+
+const  asdfsd = document.querySelectorAll(".contact p")
+asdfsd.forEach((element,i )=>{  
+  let item 
+  if(i===0) item = "address"
+  if(i===1) item = "phone"
+  if(i===2) item = "email"
+  element.textContent=siteContent["contact"][`${item}`];
+
+}) 
+
+
+const  foot = document.querySelector("footer p")
+foot.textContent=siteContent["footer"]["copyright"];
+
+
+
+
+const superNAV = document.querySelector("nav");
+
+const newE1 = document.createElement("a");
+newE1.textContent = "LAMBDAAAAH"
+superNAV.appendChild(newE1);
+
+const newE2 = document.createElement("a");
+newE2.textContent = "lamb people"
+superNAV.prepend(newE2);
+
+const greenNNN = document.querySelectorAll("a");
+greenNNN.forEach(el=>{
+  el.style.color = "green"
+})
